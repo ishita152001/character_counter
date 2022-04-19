@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="4.0" type="plugin" group="system" method="upgrade">
+	<name>System - Character Meta Counter</name>
+	<creationDate>2022</creationDate>
+	<author>Character</author>
+	<copyright>Copyright (C) 2022. All rights reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-3.0.html GNU/GPL</license>
+	<version>1.2.1</version>
+	<description>PLG_CHARACTER_META_COUNTER_DESCRIPTION</description>
+	<files>
+		<filename plugin="character_meta_counter">character_meta_counter.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_character_meta_counter.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_character_meta_counter.sys.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.plg_system_character_meta_counter.ini</language>
+		<language tag="ru-RU">ru-RU/ru-RU.plg_system_character_meta_counter.sys.ini</language>
+	</languages>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="title_length"
+					type="number"
+					default="60"
+					hint="60"
+					label="PLG_CHARACTER_META_COUNTER_TITLE_LENGTH"
+					min="1"
+					step="1"
+					filter="integer"
+					required= "true"
+				/>
+
+				<field
+					name="desc_length"
+					type="number"
+					default="160"
+					hint="160"
+					label="PLG_CHARACTER_META_COUNTER_DESC_LENGTH"
+					min="1"
+					step="1"
+					filter="integer"
+					required= "true"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+
+	<updateservers>
+		<server type="extension" enabled="1" element="plg_character_meta_counter" name="Charcter Meta Counter">https://raw.githubusercontent.com/character/plg_character_meta_counter/master/update.xml</server>
+	</updateservers>
+
+</extension>
